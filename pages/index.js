@@ -8,7 +8,7 @@ export default function Home() {
   const [todo, setTodo] = useState({title:"", desc:""})
 
   const addData = () =>{
-    //step 1 to create a local storage named todosLocal
+    //step 1 to create a local storage named todosLocal : key is todosLocal
    const todos = localStorage.getItem("todosLocal");
 
    if(todos){
@@ -17,10 +17,10 @@ export default function Home() {
 
     //step 3 to filter out if the same title is there or not
     if(todosJson.filter(val => { return val.title == todo.title}).length > 0){
-      alert("todo of this title has been added already")
+      alert("todo with this title Already added ")
     }else{
      
-      //push the parse js data into todo
+      //push the parse js data into todo and todo is coming from the onchange func  
       todosJson.push(todo)  
       // then set the localStorage with the same name and then convert into json obj using the stringify
       localStorage.setItem("todosLocal", JSON.stringify(todosJson) )
