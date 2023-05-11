@@ -22,7 +22,6 @@ const page = () => {
     localStorage.setItem("todosLocal", JSON.stringify(newtodos));
     setTodos(newtodos);
   };
-  const updateItem = () => {};
   return (
     <>
       <section class="text-gray-600 body-font">
@@ -78,7 +77,7 @@ const page = () => {
                         </a>
                         <a
                           class="ml-2 text-gray-500 cursor-pointer"
-                          onClick={updateItem}
+                          href={`/edit/${item.title}`}
                         >
                           <svg
                             xmlns="http://www.w3.org/2000/svg"
