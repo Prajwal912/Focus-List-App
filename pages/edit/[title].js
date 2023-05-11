@@ -41,7 +41,7 @@ const edit = () => {
      if(todos){
         let todoJSON = JSON.parse(todos);
         let ftodo = todoJSON.filter(e => title == e.title)  
-        if(ftodo.length >0){
+        if(ftodo.length > 0){
             setTodo(ftodo[0])
         }
      }
@@ -94,7 +94,7 @@ const edit = () => {
                 />
               </div>
               <button onClick={addData} class="text-white bg-purple-500 border-0 py-2 px-8 focus:outline-none hover:bg-purple-600 rounded text-lg w-fit">
-                Add your Focus List
+                Update your Focus List
               </button>
               <p class="text-xs text-gray-500 mt-3">
                 The best Focus List out there.
