@@ -36,7 +36,7 @@ const page = () => {
               work on next.
             </p>
 
-            {todosLoop.length == 0 && (
+            {todosLoop?.length == 0 && (
               <p class="lg:w-2/3 mx-auto leading-relaxed text-base">
                 Your Todo Will Show here
               </p>

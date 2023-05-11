@@ -40,8 +40,8 @@ const edit = () => {
      let todos = localStorage.getItem("todosLocal");
      if(todos){
         let todoJSON = JSON.parse(todos);
-        let ftodo = todoJSON.filter(e => title == e.title)  
-        if(ftodo.length > 0){
+        let ftodo = todoJSON?.filter(e => title == e.title)  
+        if(ftodo?.length > 0){
             setTodo(ftodo[0])
         }
      }

@@ -16,7 +16,7 @@ export default function Home() {
     let todosJson = JSON.parse(todos);
 
     //step 3 to filter out if the same title is there or not
-    if(todosJson.filter(val => { return val.title == todo.title}).length > 0){
+    if(todosJson?.filter(val => { return val.title == todo.title})?.length > 0){
       alert("todo with this title Already added ")
     }else{
      
