@@ -2,7 +2,7 @@ import React from "react";
 import { useEffect, useState } from "react";
 const page = () => {
   // const todosLoop = [
-  //   { title: "title", desc: "hey" },
+  //   { title: "tie", desc: "hey" },
   //   { title: "title1", desc: "new added" },
   //   { title: "new ", desc: "title" },
   // ];
@@ -15,8 +15,10 @@ const page = () => {
 
   const deleteItem = (title) => {
     let newtodos = todosLoop.filter((item) => {
+      // console.log(item.title != title, "agar button ka title and loop card ka title same hai toh filter out ho jayega card and wahi pr return ho jayega")
       return item.title != title;
     });
+    //only true card will push in the localstorage
     localStorage.setItem("todosLocal", JSON.stringify(newtodos));
     setTodos(newtodos);
   };
@@ -101,3 +103,8 @@ const page = () => {
 };
 
 export default page;
+
+
+
+
+
