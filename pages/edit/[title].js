@@ -12,6 +12,7 @@ const edit = () => {
 
     const updateData = () => {
           localStorage.setItem("todosLocal", JSON.stringify([todo]) )
+          alert("your list has been updated")
        }
 
     useEffect(() => {
